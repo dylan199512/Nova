@@ -1,17 +1,4 @@
-# Nova — Core
 anthropic>=0.84.0
-rich>=13.0.0
-
-# Nova Web — Streamlit UI
 streamlit>=1.32.0
 plotly>=5.0.0
 pandas>=2.0.0
-
-# Nova Voice — Speech input
-openai-whisper>=20231117
-sounddevice>=0.4.6
-soundfile>=0.12.1
-numpy>=1.24.0
-
-# Nova Email — Weekly summary
-sendgrid>=6.11.0
