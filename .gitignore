@@ -1,0 +1,12 @@
+.nova/
+*.dat
+.env
+.env.*
+.streamlit/secrets.toml
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+.DS_Store
+*.log
+nova_export_*.txt
