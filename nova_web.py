@@ -109,7 +109,7 @@ def init_state():
         "messages": [],
         "support": False,
         "lang": prefs.get("lang", "en"),
-        "api_key": prefs.get("api_key","") or os.environ.get("ANTHROPIC_API_KEY","") or __import__("streamlit").secrets.get("ANTHROPIC_API_KEY",""),
+        "api_key": prefs.get("api_key","") or os.environ.get("ANTHROPIC_API_KEY","") or (st.secrets.get("ANTHROPIC_API_KEY","") if hasattr(st, "secrets") else "") or __import__("streamlit").secrets.get("ANTHROPIC_API_KEY",""),
         "goals": load_enc("goals.dat", []),
         "moods": load_enc("moods.dat", []),
         "journal_entries": load_enc("journal.dat", []),
