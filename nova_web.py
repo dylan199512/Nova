@@ -27,11 +27,11 @@ XOR_KEY = "nova-xor-key-v1"
 
 def xor_encrypt(text):
     enc = "".join(chr(ord(c) ^ ord(XOR_KEY[i % len(XOR_KEY)])) for i,c in enumerate(text))
-    return base64.b64encode(enc.encode("latin-1")).decode("ascii")
+    return base64.b64encode(enc.encode("utf-8", errors="surrogateescape")).decode("ascii")
 
 def xor_decrypt(token):
     try:
-        dec = base64.b64decode(token.encode("ascii")).decode("latin-1")
+        dec = base64.b64decode(token.encode("ascii")).decode("utf-8", errors="surrogateescape")
         return "".join(chr(ord(c) ^ ord(XOR_KEY[i % len(XOR_KEY)])) for i,c in enumerate(dec))
     except Exception: return ""
 
