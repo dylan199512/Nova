@@ -2,6 +2,7 @@
 """
 Nova — Multilingual Sobriety Companion  v2.0
 Powered by Claude (Anthropic API)
+A multilingual sobriety companion powered by Claude, designed with privacy‑preserving and harm‑minimization principles.
 
 Usage:  python3 nova.py
 Deps:   pip install anthropic rich
